@@ -3,6 +3,7 @@
 A responsive static website for Prime Choice Kids Care, built with plain HTML, CSS and JavaScript. No package installation or build step is required.
 
 The supplied school logo is saved as `logo.png` and is used in the header, footer and favicon.
+The mini fun fair and swimming club have dedicated pages linked from the main navigation and program cards.
 
 ## Run locally
 
@@ -14,7 +15,7 @@ There is no compilation step. Publish the contents of this folder to any static 
 
 ## Photos and enquiries
 
-The public school-photo albums are embedded using Google Drive image URLs. Those images require an internet connection and can be changed in `script.js` (gallery) and `index.html` (section photos).
+The public school-photo albums are embedded using Google Drive image URLs. Those images require an internet connection and can be changed in `script.js` (gallery), `index.html` (section photos), and the dedicated fun fair and swimming club pages.
 
 Enquiry forms validate in the browser and prepare a `mailto:` message to `primechoicekidscare@gmail.com`. The website has no backend and does not transmit or store form submissions; the visitor must send the prepared email from their own email app.
 
