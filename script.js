@@ -89,22 +89,22 @@ if (dotsContainer && slideElements.length) {
 }
 
 const galleryPhotos = [
-  { id: "146qGxVje3zZ1MQLXZJ9ybnrvnsZDK0np", title: "A moment at school", category: "school", group: "School life" },
-  { id: "1CT1YnQYec4isBhDKpswFHSiCyzDZuYJj", title: "A day together", category: "school", group: "School life" },
-  { id: "1OJLS6GFhPtbWx72wTfFrsAXoC2dXvyHV", title: "Little moments", category: "school", group: "School life" },
-  { id: "1vXnoMJcJfsjuHiCaK2IsbFUwTU2OoFKq", title: "From our school album", category: "school", group: "School life" },
-  { id: "1AoP2aGiGNv6pp2arbHRhuVRm7UIPcTQS", title: "A school day to remember", category: "school", group: "School life" },
-  { id: "1dfLj7gzuiQvEOA_UKprxNH-vItNf1QmY", title: "Growing side by side", category: "school", group: "School life" },
-  { id: "1Dk_42qPyh0mXAY08fB5i1BAL1wEPYwQY", title: "A little school joy", category: "school", group: "School life" },
-  { id: "1TpS0WomGSC8NI0uXQGc7iptv-jRRq13C", title: "Together at Prime Choice", category: "school", group: "School life" },
-  { id: "1TDYw1Z4odm6KL4dnnO-877ISjV8Kqakk", title: "Celebrating a milestone", category: "graduation", group: "Graduation" },
-  { id: "15cswwNX_P4SAf4HKaA4qpTugu8yme2xq", title: "Graduation day", category: "graduation", group: "Graduation" },
-  { id: "1-4KAfDHg28VYTKi5htIALFBgId_bcrqr", title: "A proud school moment", category: "graduation", group: "Graduation" },
-  { id: "1hm79kf5noAzmR72keqBTltDKanvIsWqS", title: "A day to celebrate", category: "graduation", group: "Graduation" },
-  { id: "1u-63DuTNFE5wxJg2AlDhSxxc_RSD7qe3", title: "Mini fun fair", category: "funfair", group: "Fun fair" },
-  { id: "1Yok-bTY6aHRfAy_5I7QbfpBijY84sFij", title: "Fun fair moments", category: "funfair", group: "Fun fair" },
-  { id: "1f0akQzRdn25C3J-4SHYoxSCUtZ3qQOBV", title: "A day of fun", category: "funfair", group: "Fun fair" },
-  { id: "1LrkbhrtkOZQMJTlWdTK9CZolATC2NBXY", title: "Making fair-time memories", category: "funfair", group: "Fun fair" }
+  { src: "./assets/gallery-school-1.jpg", title: "Learning at the table", category: "school", group: "School life" },
+  { src: "./assets/gallery-school-2.jpg", title: "A quiet moment with a book", category: "school", group: "School life" },
+  { src: "./assets/gallery-school-3.jpg", title: "A classroom moment", category: "school", group: "School life" },
+  { src: "./assets/gallery-school-4.jpg", title: "Time together in class", category: "school", group: "School life" },
+  { src: "./assets/gallery-school-5.jpg", title: "Friends at school", category: "school", group: "School life" },
+  { src: "./assets/gallery-school-6.jpg", title: "Ready for a school day", category: "school", group: "School life" },
+  { src: "./assets/gallery-school-7.jpg", title: "A proud school portrait", category: "school", group: "School life" },
+  { src: "./assets/gallery-school-8.jpg", title: "Growing with confidence", category: "school", group: "School life" },
+  { src: "./assets/gallery-graduation-1.jpg", title: "Celebrating together", category: "graduation", group: "Graduation" },
+  { src: "./assets/gallery-graduation-2.jpg", title: "A proud graduation day", category: "graduation", group: "Graduation" },
+  { src: "./assets/gallery-graduation-3.jpg", title: "Sharing a milestone", category: "graduation", group: "Graduation" },
+  { src: "./assets/gallery-graduation-4.jpg", title: "Smiles after the ceremony", category: "graduation", group: "Graduation" },
+  { src: "./assets/gallery-event-1.jpg", title: "A special day at school", category: "events", group: "School events" },
+  { src: "./assets/gallery-event-2.jpg", title: "Celebrating with friends", category: "events", group: "School events" },
+  { src: "./assets/gallery-event-3.jpg", title: "A day to remember", category: "events", group: "School events" },
+  { src: "./assets/gallery-event-4.jpg", title: "Making happy memories", category: "events", group: "School events" }
 ];
 
 const galleryGrid = document.querySelector("#gallery-grid");
@@ -123,7 +123,7 @@ function renderGallery(filter = "all") {
     button.setAttribute("aria-label", `Enlarge photo: ${photo.title}, ${photo.group}`);
 
     const image = document.createElement("img");
-    image.src = `https://lh3.googleusercontent.com/d/${photo.id}=w900`;
+    image.src = photo.src || `https://lh3.googleusercontent.com/d/${photo.id}=w900`;
     image.alt = photo.title;
     image.loading = "lazy";
     image.decoding = "async";
